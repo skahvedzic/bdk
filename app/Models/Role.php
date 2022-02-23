@@ -9,6 +9,8 @@ class Role extends Model
 {
     use HasFactory;
 
+    //This is comment
+
 /**
      * The attributes that are mass assignable.
      *
