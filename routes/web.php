@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ConsumerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    //dd(Role::all());
     return view('welcome');
 });
 
@@ -21,4 +23,5 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::resource('consumer', ConsumerController::class);
 require __DIR__.'/auth.php';
