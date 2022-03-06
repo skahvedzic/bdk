@@ -16,16 +16,15 @@ class ConsumerController extends Controller
     public function index()
     {
 
-        $users = User::whereHas('roles', function($query) {
+        $consumers = User::whereHas('roles', function($query) {
 
             $query->where('name','consumer');
 
         })->get();
 
-        //dd($users);
 
         return view('consumer.index',[
-            'consumers' => $users
+            'consumers' => $consumers
         ]);
 
 
