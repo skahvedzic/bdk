@@ -51,4 +51,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class)->withTimestamps();
     }
+
+    public function donations()
+    {
+        return $this->hasMany(Donation::class);
+    }
 }

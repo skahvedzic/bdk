@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ConsumerController;
+use App\Http\Controllers\DonorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,4 +25,5 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::resource('consumer', ConsumerController::class);
+Route::resource('donor', DonorController::class);
 require __DIR__.'/auth.php';
