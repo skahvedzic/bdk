@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreDonor;
 
 class DonorController extends Controller
 {
@@ -51,9 +52,12 @@ class DonorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreDonor $request)
     {
-        //
+        $validated = $request->validated();
+  
+        // dd($validated);
+
     }
 
     /**
